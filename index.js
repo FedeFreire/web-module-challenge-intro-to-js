@@ -142,11 +142,25 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
 function hungryDog(weight,age){
   if (age >= 1) {
     if (weight <= 5){
-      return "Your dog should eat " +0.05 * weight
-    } else if (age )
+      return  0.05 * weight
+    } else if (weight >=6 && weight <=10){
+      return 0.04 * weight 
+    } else if (weight >=11 && weight <=15){
+      return 0.03 * weight 
+    } else {
+      return 0.02 * weight 
+    }
+  } else {
+    if (age >=0.17 && age <=0.33){
+      return 0.10 * weight
+    } else if (age >0.33 && age <=0.58){
+      return 0.05 * weight
+    } else if (age >0.58 && age <1){
+      return 0.04 * weight 
+    }
   }
 }
-console.log(hungryDog(4,1))
+console.log(hungryDog(7,0.18))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
