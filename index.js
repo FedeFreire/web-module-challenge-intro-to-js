@@ -184,11 +184,25 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
-function game(user, computer){
-  /*add your code here*/
+var computer = Math.random();
+
+if (computer <= 0.33) {
+  computer = 'rock';
+} else if (computer >=0.33 && computer <= 0.66){
+  computer = 'paper';
+} else {
+  computer = 'scissors'
 }
 
-
+function game(user, computer){
+  if (user === computer){
+    return "it's a tie"
+  } else if ((user === 'scissors' && computer === 'paper') || (user === 'paper' && computer === 'rock') || (user === 'rock' && computer === 'scissors')){
+    return "you win!"
+} else {
+  return "you lose!"
+}
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -201,8 +215,8 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+  return km * 0.621371;
 }
 
 
@@ -215,8 +229,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48;
 }
 
 
