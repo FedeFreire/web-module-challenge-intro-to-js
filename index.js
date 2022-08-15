@@ -303,9 +303,18 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+const vowels = ["a", "e", "i", "o", "u"]
+
+function vowelCounter(str) {
+    let count = 0;
+    for (let letter of str.toLowerCase()) {
+        if (vowels.includes(letter)) {
+            count++;
+        }
+    }
+    return count
 }
+console.log(vowelCounter("house of the rising sun"));
 
 
 
