@@ -249,9 +249,14 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(startNum){
+  // startNum = 5;    
+  return startNum+" bottles of soda on the wall, "+startNum+" bottles of soda, take one down pass it around "+(startNum - 1 )+" bottles of soda on the wall";
 }
+for ( let startNum = 100 ; startNum >= 1 ; startNum-- ) {
+    // declare a var | conditional expression | increment var
+        console.log(annoyingSong(startNum));
+    }
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
